@@ -1,8 +1,12 @@
 module.exports = {
   darkMode: "class",
-  content: ["./*.html"],
+  content: ["*"],
   theme: {
-    extend: {},
+    extend: {
+      font-family: {
+        outfit: ['outfit', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 };
