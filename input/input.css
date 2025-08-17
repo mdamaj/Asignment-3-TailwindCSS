@@ -6,4 +6,17 @@
     .nav-link-design{
         @apply hover:text-red-500 transition hover:scale-105 hover:translate-y-1 text-[16px];
     }
+
+    .learn-arrow{
+        @apply text-[#F44335] mt-1 w-[50px] h-[50px] bg-[#F9CCC7] rounded-full flex items-center justify-center;
+    }
+
+    .learn-arrow-p{
+        @apply text-[#181818] text-[18px] dark:text-gray-200;
+    }
+
+    .skill-span-tag{
+        @apply px-3.5 py-1 bg-[#FAFAFA] dark:bg-gray-700 border border-red-400 rounded-full text-sm sm:text-base md:text-[18px] text-gray-800 dark:text-gray-200 text-center shadow-sm transition-all cursor-pointer hover:bg-red-200;
+    }
+    
 }
