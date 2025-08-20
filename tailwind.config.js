@@ -1,11 +1,16 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  content: ["*"],
+  content: [
+    "./index.html",
+    "./app.js",
+    "./input/**/*.{css}",
+  ],
   theme: {
     extend: {
-      font-family: {
-        outfit: ['outfit', 'sans-serif']
-      }
+      fontFamily: {
+        outfit: ['Outfit', 'sans-serif'],
+      },
     },
   },
   plugins: [],

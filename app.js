@@ -1,26 +1,24 @@
-const htmlTag = document.getElementById("htmlTag");
 const switchBtn = document.getElementById("switch");
 const menuToggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 
+
 switchBtn.addEventListener("click", () => {
   htmlTag.classList.toggle("dark");
-
-  if (htmlTag.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-  } else {
-    localStorage.setItem("theme", "light");
-  }
 });
 
-window.addEventListener("load", () => {
+
+window.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    htmlTag.classList.add("dark");
+  const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  if (savedTheme === "dark" || (!savedTheme && systemDark)) {
+    document.documentElement.classList.add("dark");
   } else {
-    htmlTag.classList.remove("dark");
+    document.documentElement.classList.remove("dark");
   }
 });
+
 
 menuToggle.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
